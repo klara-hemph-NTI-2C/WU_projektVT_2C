@@ -1,7 +1,79 @@
 *{
+}
+
+body {
     background-color: rgb(234, 193, 140);
+
 }
 
 nav{
     background-color: rgb(102, 166, 169);
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#linklist {
+    display: flex;
+    flex-direction: row;
+    column-gap: 50px;
+}
+
+.bildmain{
+    width: 500px;
+    height: 400px;
+    background-size: contain;
+}
+
+#skriv{
+    grid-area: skriv;
+}
+
+#bibliotek{
+    grid-area: bibliotek;
+}
+
+#flygbok{
+    grid-area: flygbok;
+}
+
+#main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 40px 1fr 1fr;
+    grid-template-areas: 
+    "nav nav nav"
+    "ar1 ar2 ar3"
+    "ar1 ar2 ar3"
+    "ar1 ar2 ar3"
+    ;
+}
+
+#article1{
+    display: grid;
+    background-color: darkgoldenrod;
+    grid-area: ar1;
+    grid-template-columns: 300px;
+    grid-template-rows: 1fr 1fr;
+
+}
+
+
+#article2{
+    display: grid;
+    background-color: rgb(11, 135, 184);
+    grid-area: ar2;
+    grid-template-columns: 300px;
+    grid-template-rows: 1fr 1fr;
+}
+
+
+#article3{
+    display: grid;
+    background-color: rgb(184, 11, 11);
+    grid-area: ar3;
+    grid-template-columns: 300px;
+    grid-template-rows: 1fr 1fr;
+    
 }
