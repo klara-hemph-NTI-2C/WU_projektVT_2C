@@ -4,6 +4,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 h1{
@@ -31,10 +32,7 @@ header{
 
 nav{
     background-color: rgb(173, 6, 6);
-    margin-left: 10px;
-    margin-right: 10px;
     grid-area: nav;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,8 +71,8 @@ a{
 #grid_body {
     display: grid;
     width: 100vw;
-    grid-template-columns: 1fr;
     grid-template-rows: minmax(0,80px) minmax(0, 100px) minmax(0, 1fr);
+    grid-template-columns: 100wh;
     grid-template-areas:
     "hea"
     "nav"
@@ -186,37 +184,61 @@ a{
 }
 
 .omossbild{
-    width: 400px;
-    height: auto;
+    width: 100%;
 }
 
 #red_bokbild{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
     grid-area: redbild;
-}
-
-#butikbild{
-    grid-area: butbild;
-    padding-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
 }
 
 #red_boktext{
     grid-area: redtext;
-    padding-top: 50px;
     background-color: blue;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;
 }
 
 #butiktext{
-    grid-area: buttext;
     background-color: crimson;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    grid-area: buttext;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
 }
 
-#omoss{
-    justify-content: center;
+#butikbild{
     display: flex;
+    justify-content: center;
+    overflow: hidden;
+    grid-area: butbild;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+}
+
+.omosstext{
+    background-color: darkslategray;
+}
+
+
+#omoss{
     display: grid;
-    height: 100%;
-    grid-template-columns: 400px 400px;
-    grid-template-rows: 1fr 1fr;
+    height: 100vh;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
     grid-template-areas: 
     "redbild buttext"
     "redtext butbild"
@@ -257,10 +279,110 @@ a{
 
 #sell{
     display: grid;
-    height: 100%;
+    height: 100vh;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 500px 100px;
     grid-template-areas: 
     "salj1 salj2 salj3"
     "foot foot foot";
+}
+
+@media screen and (max-width: 600px) {
+    #grid_index {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "im1"
+        "se1"
+        "im2"
+        "se2"
+        "im3"
+        "se3"
+        ;
+    }
+
+    #omoss{
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "redbild" 
+        "redtext"
+        "butbild"
+        "buttext"
+        ;
+    }
+
+    #red_bokbild{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 5px;
+    }
+    
+    #red_boktext{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 5px;
+    }
+    
+    #butikbild{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 5px;
+        margin-bottom: 0px;
+    }
+
+    #butiktext{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        margin-top: 0px;
+    }
+
+
+    .card_grid {
+        margin: 0;
+        padding: 0;
+        display: grid;
+        height: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        grid-template-areas:
+        "img" 
+        "txt"
+        ;
+        overflow-x: visible;
+    }
+
+    .card {
+        border: none; 
+        width: 100vw;
+        padding: 0px;
+    }
+    
+    .card_img {
+        grid-area: img;
+        padding: 10px;
+        width: 100%;
+        align-self: auto;
+
+    }
+    
+    .card_txt {
+        overflow: hidden;
+        padding-left: 20px;
+        padding-right: 20px;
+        grid-area: txt;
+        text-align: start;
+
+    }
+    
+    .cards {
+        padding-top: 0px;
+        max-width: auto;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        overflow-x: visible;
+    }
 }
