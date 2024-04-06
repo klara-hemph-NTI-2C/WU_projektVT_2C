@@ -1,13 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&display=swap');
 
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     overflow-x: hidden;
+
+
+    --burgerline_width: 30px;
+    --burgerline_height: 5px;
+    --burgerline_margin: 6px;
+
+    --background_color: rgb(173, 6, 6);
+
 }
 
-h1{
+h1 {
     text-decoration: none;
     font-size: 80px;
     color: rgb(173, 6, 6);
@@ -20,7 +28,7 @@ body {
     background-color: rgb(198, 166, 86);
 }
 
-header{
+header {
     padding-top: 10px;
     display: flex;
     align-items: center;
@@ -30,7 +38,7 @@ header{
     background-color: rgb(198, 166, 86);
 }
 
-nav{
+nav {
     background-color: rgb(173, 6, 6);
     grid-area: nav;
     display: flex;
@@ -47,20 +55,20 @@ nav{
     text-decoration: none;
 }
 
-a{
+a {
     text-decoration: none;
     font-size: 50px;
     color: rgb(198, 166, 86);
     font-weight: bold;
 }
 
-.bildmain{
+.bildmain {
     width: 410px;
     height: 300px;
     background-size: contain;
 }
 
-.boktitlar{
+.boktitlar {
     height: 300px;
 }
 
@@ -71,8 +79,7 @@ a{
 #grid_body {
     display: grid;
     width: 100vw;
-    grid-template-rows: minmax(0,80px) minmax(0, 100px) minmax(0, 1fr);
-    grid-template-columns: 100wh;
+    grid-template-rows: minmax(0, 80px) minmax(0, 100px) minmax(0, 1fr);
     grid-template-areas:
     "hea"
     "nav"
@@ -84,10 +91,10 @@ a{
     display: grid;
     height: 100%;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "im1 im2 im3"
-    "se1 se2 se3"
+    grid-template-rows: 2fr 3fr;
+    grid-template-areas:
+        "im1 im2 im3"
+        "se1 se2 se3"
     ;
 }
 
@@ -95,29 +102,49 @@ a{
     padding: 0 10px 0 10px;
 }
 
+p{
+    background-color: rgb(252, 231, 208);
+    border: 4px;
+    border-color: rgb(173, 6, 6);
+    border-style: solid;
+    border-radius: 10px;
+}
+
 #section_1 {
     text-align: center;
     grid-area: se1;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    
 }
 
 #section_2 {
     text-align: center;
     grid-area: se2;
+    padding-top: 20px;
+
 }
 
 #section_3 {
     text-align: center;
     grid-area: se3;
+    padding-top: 20px;
+
 }
 
 #image_1 {
+    padding-top: 20px;
+
     display: flex;
     align-items: center;
     justify-content: center;
     grid-area: im1;
 }
 
+
 #image_2 {
+    padding-top: 20px;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,6 +152,8 @@ a{
 }
 
 #image_3 {
+    padding-top: 20px;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -141,14 +170,29 @@ a{
     height: 100%;
     grid-template-columns: minmax(0, 1fr) 1fr;
     grid-template-areas:
-    "img txt"
+        "img txt"
     ;
 }
 
 .card {
-    border:  4px solid; 
+    border: 4px solid;
     height: 500px;
     overflow: hidden;
+    background-color: rgb(252, 231, 208);
+}
+
+.korg:hover{
+    background-color: rgb(173, 6, 6);
+    color: rgb(252, 231, 208) ;
+}
+
+#fottext{
+    border-width: 2px;
+}
+
+.kop:hover{
+    background-color: rgb(173, 6, 6);
+    color: rgb(252, 231, 208) ;
 }
 
 .card_img {
@@ -164,12 +208,14 @@ a{
     padding: 20px 20px 20px 10px;
     grid-area: txt;
     text-align: start;
+    border: 0px;
+    border-radius: 0px;
 }
-  
+
 .card_img_w {
     width: 100%;
 }
-  
+
 .card_img_h {
     height: 100%;
 }
@@ -183,11 +229,11 @@ a{
     grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
 }
 
-.omossbild{
+.omossbild {
     width: 100%;
 }
 
-#red_bokbild{
+#red_bokbild {
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -197,10 +243,15 @@ a{
     margin-top: 50px;
 }
 
-#red_boktext{
+#red_boktext {
     grid-area: redtext;
-    background-color: blue;
+    background-color: rgb(252, 231, 208);
     display: flex;
+    border-style: solid;
+    border-color: crirgb(173, 6, 6)mson;
+    border-radius: 4px;
+    border-width: 4px;
+    border-top: 0px;
     justify-content: center;
     overflow: hidden;
     margin-left: 100px;
@@ -208,8 +259,13 @@ a{
     margin-bottom: 50px;
 }
 
-#butiktext{
-    background-color: crimson;
+#butiktext {
+    background-color: rgb(252, 231, 208);
+    border-style: solid;
+    border-color: rgb(173, 6, 6);
+    border-radius: 4px;
+    border-width: 4px;
+    border-bottom: 0px;
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -219,7 +275,7 @@ a{
     margin-top: 50px;
 }
 
-#butikbild{
+#butikbild {
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -229,110 +285,210 @@ a{
     margin-bottom: 50px;
 }
 
-.omosstext{
-    background-color: darkslategray;
-}
 
 
-#omoss{
+
+#omoss {
     display: grid;
     height: 100vh;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
-    grid-template-areas: 
-    "redbild buttext"
-    "redtext butbild"
+    grid-template-areas:
+        "redbild buttext"
+        "redtext butbild"
     ;
 }
 
-.sellbok{
+.sellbok {
     width: 250px;
     height: auto;
 }
 
-#salj1{
+#salj1 {
     grid-area: salj1;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#salj2{
+#salj2 {
     grid-area: salj2;
-    display: grid;
+    flex-direction: column;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
 
-#salj3{
+#salj3 {
     grid-area: salj3;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+#cart {
+    height: 50px;
+}
 
-#foot{
+#foot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#foot {
     grid-area: foot;
 }
 
-#sell{
+#sell {
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 500px 100px;
-    grid-template-areas: 
+    grid-template-rows: 5fr 1fr;
+    grid-template-areas:
     "salj1 salj2 salj3"
     "foot foot foot";
 }
 
+
+/* hamburgare */
+
+#burger_menu {
+    height: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: monospace;
+}
+
+#link_list {
+    background: var(--background_color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: -100vh;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.links_visible {
+    transform: translateY(100vh);
+}
+
+#link_list a {
+    text-decoration: none;
+    color: rgb(252, 231, 208);
+    font-weight: bold;
+    font-size: 1.25rem;
+    letter-spacing: 0.1875rem;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+#link_list a:hover {
+    background: rgb(252, 231, 208);
+    color: rgb(173, 6, 6);
+}
+
+.burger_line {
+    width: var(--burgerline_width);
+    height: var(--burgerline_height);
+    margin: var(--burgerline_margin);
+    background: rgb(252, 231, 208);
+    border-radius: 30px;
+}
+
+.burger_in_x_form #burger_line_1 {
+    transform: translateY(calc((var(--burgerline_height) + var(--burgerline_margin)))) rotate(45deg);
+}
+
+.burger_in_x_form #burger_line_2 {
+    opacity: 0;
+}
+
+.burger_in_x_form #burger_line_3 {
+    transform: translateY(calc((-1)*(var(--burgerline_height) + var(--burgerline_margin)))) rotate(-45deg);
+}
+
+#burger {
+    display: none;
+    position: fixed;
+    top: 0;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 600px) {
+
+    /* burgare */
+    #linklist {
+        display: none;
+    }
+
+    nav {
+        display: none;
+        height: 0;
+    }
+
+    #burger {
+        display: block;
+    }
+
+
     #grid_index {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-areas: 
-        "im1"
-        "se1"
-        "im2"
-        "se2"
-        "im3"
-        "se3"
+        grid-template-areas:
+            "im1"
+            "se1"
+            "im2"
+            "se2"
+            "im3"
+            "se3"
         ;
     }
 
-    #omoss{
+    #omoss {
         height: auto;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-areas: 
-        "redbild" 
-        "redtext"
-        "butbild"
-        "buttext"
+        grid-template-areas:
+            "redbild"
+            "redtext"
+            "butbild"
+            "buttext"
         ;
     }
 
-    #red_bokbild{
+    #red_bokbild {
         margin-left: 10px;
         margin-right: 10px;
         margin-top: 5px;
     }
-    
-    #red_boktext{
+
+    #red_boktext {
         margin-left: 10px;
         margin-right: 10px;
         margin-bottom: 5px;
     }
-    
-    #butikbild{
+
+    #butikbild {
         margin-left: 10px;
         margin-right: 10px;
         margin-top: 5px;
         margin-bottom: 0px;
     }
 
-    #butiktext{
+    #butiktext {
         margin-left: 10px;
         margin-right: 10px;
         margin-bottom: 10px;
@@ -348,18 +504,18 @@ a{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr auto;
         grid-template-areas:
-        "img" 
-        "txt"
+            "img"
+            "txt"
         ;
         overflow-x: visible;
     }
 
     .card {
-        border: none; 
+        border: none;
         width: 100vw;
         padding: 0px;
     }
-    
+
     .card_img {
         grid-area: img;
         padding: 10px;
@@ -367,7 +523,7 @@ a{
         align-self: auto;
 
     }
-    
+
     .card_txt {
         overflow: hidden;
         padding-left: 20px;
@@ -376,7 +532,7 @@ a{
         text-align: start;
 
     }
-    
+
     .cards {
         padding-top: 0px;
         max-width: auto;
@@ -384,5 +540,20 @@ a{
         display: grid;
         grid-template-columns: 1fr;
         overflow-x: visible;
+    }
+
+
+
+    #sell {
+        display: grid;
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 100px;
+        grid-row-gap: 20px;
+        grid-template-areas:
+        "salj1" 
+        "salj2" 
+        "salj3"
+        "foot";
     }
 }

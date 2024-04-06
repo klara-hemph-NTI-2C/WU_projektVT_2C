@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,43 +13,62 @@
 <body>
     <div id="grid_body">
         <header>
-            <h1>NovelNest</h1> 
-         </header>
-    <nav>
-        <ul id="linklist">
-        
-        <li><a href= index.html> startsida</a></li>
-        <li><a href= omoss.html> om oss</a></li>
-        <li><a href= rewiew.html> Bokrecencioner</a></li>
-        <li><a href= sell.html> butik</a></li>
-        
-        </ul>
+            <h1>NovelNest</h1>
+        </header>
+        <nav>
+            <ul id="linklist">
+                <li><a href=index.html> startsida</a></li>
+                <li><a href=omoss.html> om oss</a></li>
+                <li><a href=rewiew.html> Bokrecencioner</a></li>
+                <li><a href=sell.html> butik</a></li>
+            </ul>
         </nav>
+
+        <section id="burger_menu">
+            <ul id="link_list" class="links_visible">
+                <li><a href=index.html> startsida</a></li>
+                <li><a href=omoss.html> om oss</a></li>
+                <li><a href=rewiew.html> Bokrecencioner</a></li>
+                <li><a href=sell.html> butik</a></li>
+            </ul>
+        
+            <section id="burger" class="burger_in_x_form">
+              <div id="burger_line_1" class="burger_line"></div>
+              <div id="burger_line_2" class="burger_line"></div>
+              <div id="burger_line_3" class="burger_line"></div>
+            </section>
+        </section>
+
         <section id="main">
             <div id="sell">
-            <section id="salj1">
-                <section id="lejonbok"><img class="sellbok" src="img/lejonbok.jpg" alt=""></section>
-                <p class="korg">lägg i varukorg</p>
-                <p class="kop">köp nu</p>
-            </section>
-            <section id="salj2">
-                <section id="lejonbok"><img class="sellbok" src="img/solbok.jpg" alt=""></section>
-                <p class="korg">lägg i varukorg</p>
-                <p class="kop">köp nu</p>
+                <section id="salj1">
+                    <section id="lejonbok"><img class="sellbok" src="img/lejonbok.jpg" alt=""></section>
+                    <p class="korg">lägg i varukorg</p>
+                    <p class="kop">köp nu</p>
+                </section>
+                <section id="salj2">
+                    <section id="lejonbok"><img class="sellbok" src="img/solbok.jpg" alt=""></section>
+                    <p class="korg">lägg i varukorg</p>
+                    <p class="kop">köp nu</p>
 
-            </section>
-            <section id="salj3">
-                <section id="lejonbok"><img class="sellbok" src="img/rymdbok.jpg" alt=""></section>
-                <p class="korg">lägg i varukorg</p>
-                <p class="kop">köp nu</p>
+                </section>
+                <section id="salj3">
+                    <section id="lejonbok"><img class="sellbok" src="img/rymdbok.jpg" alt=""></section>
+                    <p class="korg">lägg i varukorg</p>
+                    <p class="kop">köp nu</p>
 
-            </section>
-            <section id="foot">
-                <p>kontakt</p>
-                <img src="img/cart_xl.png" alt="">
-            </section>
-        </div>
+                </section>
+                <section id="foot">
+                    <p id="fottext">Detta är böckerna som finns inne för tillfället. Om ni vill skicka in era egna böcker för att säljas så kan ni kontakta oss på 072-123 456 78 eller på vår mejl bocker@gmail.
+                        våra adress är bokgatan 11 bokstaden.
+                    </p>
+                    <img id="cart" src="img/cart_xl.png" alt="">
+                </section>
+            </div>
         </section>
     </div>
+
+    <script src="js/hamburgare.js"></script>
 </body>
+
 </html>
