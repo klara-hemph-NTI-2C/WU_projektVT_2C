@@ -248,7 +248,7 @@ p{
     background-color: rgb(252, 231, 208);
     display: flex;
     border-style: solid;
-    border-color: crirgb(173, 6, 6)mson;
+    border-color: rgb(173, 6, 6);
     border-radius: 4px;
     border-width: 4px;
     border-top: 0px;
@@ -535,7 +535,7 @@ p{
 
     .cards {
         padding-top: 0px;
-        max-width: auto;
+        max-width: 100%;
         margin: 0;
         display: grid;
         grid-template-columns: 1fr;
